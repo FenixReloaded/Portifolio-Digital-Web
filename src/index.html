@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Profissional</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="container">
+            <a class="nav-brand" href="#">Portfólio</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span class="menu-icon"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero-section">
+        <div class="container hero-content">
+            <h1>Caio Pereira Guimarães</h1>
+            <p>Desenvolvedor e Engenheiro de Software</p>
+            <a href="#projetos" class="btn btn-primary">Ver Meus Projetos</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <div class="container sobre-container">
+                <div class="sobre-imagem">
+                    <img src="assets/myimage.png" class="profile-image" alt="Foto de Caio Pereira Guimarães">
+                </div>
+                <div class="sobre-texto">
+                    <h2>Sobre Mim</h2>
+                    <p>Olá! Eu sou [Seu Nome], um desenvolvedor de software com foco em criar experiências digitais incríveis. Tenho experiência com tecnologias modernas e estou sempre buscando aprender e aplicar as melhores práticas do mercado.</p>
+                    <p>Minhas principais habilidades incluem:</p>
+                    <div class="skills-icons">
+                        <i class="bi bi-filetype-html" title="HTML5"></i>
+                        <i class="bi bi-filetype-css" title="CSS3"></i>
+                        <i class="bi bi-filetype-js" title="JavaScript"></i>
+                        <i class="bi bi-bootstrap" title="Bootstrap"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="section-light">
+            <div class="container">
+                <h2>Meus Projetos Principais</h2>
+                <div class="projetos-container">
+                    <article class="project-card">
+                        <img src="assets/placeholder-image.jpg" alt="Nome do Projeto 1">
+                        <div class="card-content">
+                            <h5>Projeto 1: Landing Page</h5>
+                            <p>Uma landing page responsiva criada para uma empresa fictícia, utilizando HTML5 e CSS3 com Flexbox.</p>
+                            <div class="card-buttons">
+                                <a href="#" class="btn btn-primary">Ver Demo</a>
+                                <a href="#" class="btn btn-secondary">Código Fonte</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="assets/placeholder-image.jpg" alt="Nome do Projeto 2">
+                        <div class="card-content">
+                            <h5>Projeto 2: Calculadora</h5>
+                            <p>Uma calculadora funcional desenvolvida com JavaScript puro, capaz de realizar as quatro operações básicas.</p>
+                             <div class="card-buttons">
+                                <a href="#" class="btn btn-primary">Ver Demo</a>
+                                <a href="#" class="btn btn-secondary">Código Fonte</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="assets/placeholder-image.jpg" alt="Nome do Projeto 3">
+                        <div class="card-content">
+                            <h5>Projeto 3: Lista de Tarefas</h5>
+                            <p>Um simples "To-Do List" para praticar a manipulação de elementos da página (DOM) com JavaScript.</p>
+                             <div class="card-buttons">
+                                <a href="#" class="btn btn-primary">Ver Demo</a>
+                                <a href="#" class="btn btn-secondary">Código Fonte</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Estou disponível para novas oportunidades. Conecte-se comigo!</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 [Seu Nome Completo]. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
