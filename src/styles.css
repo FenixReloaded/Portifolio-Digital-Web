@@ -220,7 +220,17 @@ section h2 {
     gap: 1.5rem;
     margin-top: 1rem;
 }
-.skills-icons i { color: var(--primary-color); }
+
+.skills-icons i { 
+    flex-flow: column;
+    align-self: flex-start;
+    color: var(--primary-color); 
+}
+.devicon-c-line {
+    padding-top: 1%;
+    font-size: 50px;
+}
+
 
 /* === SEÇÃO PROJETOS === */
 .projetos-container {
@@ -289,4 +299,33 @@ section h2 {
     .sobre-texto { text-align: center; }
     .skills-icons { justify-content: center; }
     .hero-content h1 { font-size: 2.5rem; }
+}
+
+/* === ESTILOS PARA A PÁGINA DE PROJETOS === */
+
+/* Cabeçalho da página (ex: "Todos os Meus Projetos") */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Botão "Voltar ao Início" na página de projetos */
+.back-to-home {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* === ESTILOS PARA A PÁGINA INICIAL === */
+
+/* Botão "Ver Todos os Projetos" na página inicial */
+.see-all-projects {
+    text-align: center;
+    margin-top: 3rem;
 }

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
     <link rel="stylesheet" href="./styles.css">
 </head>
@@ -35,9 +36,9 @@
 
     <header id="inicio" class="hero-section">
         <div class="container hero-content">
-            <h1>Caio Pereira Guimarães</h1>
-            <p>Desenvolvedor e Engenheiro de Software</p>
-            <a href="#projetos" class="btn btn-primary">Ver Meus Projetos</a>
+            <h1>Nome do Aluno</h1>
+            <p>Situação/Cargo atual do Aluno</p>
+            <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
         </div>
     </header>
 
@@ -55,7 +56,8 @@
                         <i class="bi bi-filetype-html" title="HTML5"></i>
                         <i class="bi bi-filetype-css" title="CSS3"></i>
                         <i class="bi bi-filetype-js" title="JavaScript"></i>
-                        <i class="bi bi-bootstrap" title="Bootstrap"></i>
+                        <i class="devicon-c-line" title="C"></i>
+                        <i class="bi bi-filetype-java" title="Java"></i>
                     </div>
                 </div>
             </div>
@@ -63,41 +65,12 @@
 
         <section id="projetos" class="section-light">
             <div class="container">
-                <h2>Meus Projetos Principais</h2>
+                <h2>Principais Projetos</h2>
                 <div class="projetos-container">
-                    <article class="project-card">
-                        <img src="assets/placeholder-image.jpg" alt="Nome do Projeto 1">
-                        <div class="card-content">
-                            <h5>Projeto 1: Landing Page</h5>
-                            <p>Uma landing page responsiva criada para uma empresa fictícia, utilizando HTML5 e CSS3 com Flexbox.</p>
-                            <div class="card-buttons">
-                                <a href="#" class="btn btn-primary">Ver Demo</a>
-                                <a href="#" class="btn btn-secondary">Código Fonte</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="project-card">
-                        <img src="assets/placeholder-image.jpg" alt="Nome do Projeto 2">
-                        <div class="card-content">
-                            <h5>Projeto 2: Calculadora</h5>
-                            <p>Uma calculadora funcional desenvolvida com JavaScript puro, capaz de realizar as quatro operações básicas.</p>
-                             <div class="card-buttons">
-                                <a href="#" class="btn btn-primary">Ver Demo</a>
-                                <a href="#" class="btn btn-secondary">Código Fonte</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="project-card">
-                        <img src="assets/placeholder-image.jpg" alt="Nome do Projeto 3">
-                        <div class="card-content">
-                            <h5>Projeto 3: Lista de Tarefas</h5>
-                            <p>Um simples "To-Do List" para praticar a manipulação de elementos da página (DOM) com JavaScript.</p>
-                             <div class="card-buttons">
-                                <a href="#" class="btn btn-primary">Ver Demo</a>
-                                <a href="#" class="btn btn-secondary">Código Fonte</a>
-                            </div>
-                        </div>
-                    </article>
+                    <!-- Projetos serão carregados aqui via JavaScript -->
+                </div>
+                <div class="see-all-projects">
+                    <a href="projetos.html" class="btn btn-primary">Ver Todos os Projetos</a>
                 </div>
             </div>
         </section>
@@ -105,20 +78,20 @@
         <section id="contato">
             <div class="container">
                 <h2>Entre em Contato</h2>
-                <p>Estou disponível para novas oportunidades. Conecte-se comigo!</p>
+                <p>Estou disponível para novas oportunidades. <br>Vamos conversar. Conecte-se comigo!</p>
                 <div class="social-links">
-                    <a href="#" target="_blank"><i class="bi bi-github"></i></a>
-                    <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                    <a href="https://github.com/FenixReloaded?tab=repositories" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/caiopguimaraes/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://mail.google.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2025 [Seu Nome Completo]. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Caio Pereira Guimarães. Todos os direitos reservados.</p> <!--Substitua pelo nome do aluno-->
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js" defer></script>
 </body>
 </html>
