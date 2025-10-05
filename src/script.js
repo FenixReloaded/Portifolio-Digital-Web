@@ -2,14 +2,18 @@ import { projetos } from './projetos_data.js';
 
 // Função que cria o HTML de um único card de projeto
 function criarCardProjeto(projeto) {
+    // Adicionamos 'data-attributes' ao botão de Demo para guardar a informação
     return `
         <article class="project-card">
-            <img src="${projeto.imagem}" alt="Imagem do ${projeto.titulo}">
+            <img src="${projeto.imagem}" alt="Imagem do ${projeto.titulo}" class="project-image">
             <div class="card-content">
                 <h5>${projeto.titulo}</h5>
                 <p>${projeto.descricao}</p>
                 <div class="card-buttons">
-                    <a href="${projeto.linkDemo}" class="btn btn-primary" target="_blank">Ver Demo</a>
+                    <a href="${projeto.demoSrc}" 
+                       class="btn btn-primary btn-demo" 
+                       data-tipo-demo="${projeto.tipoDemo}" 
+                       data-demo-src="${projeto.demoSrc}">Ver Demo</a>
                     <a href="${projeto.linkCodigo}" class="btn btn-secondary" target="_blank">Código Fonte</a>
                 </div>
             </div>
@@ -17,53 +21,54 @@ function criarCardProjeto(projeto) {
     `;
 }
 
-// Função que carrega os projetos na página
-function carregarProjetos() {
-    // Encontra o container de projetos na página atual
-    const containerProjetos = document.querySelector('.projetos-container');
-    
-    // Se não encontrar o container, não faz nada
-    if (!containerProjetos) return;
-
-    // Verifica se estamos na página principal (index.html)
-    // O body do index.html pode ter um ID específico para isso, ou podemos checar o título, etc.
-    // Uma forma simples é checar se existe a seção #todos-projetos
-    const ehPaginaDeProjetos = document.querySelector('#todos-projetos');
-
-    if (ehPaginaDeProjetos) {
-        // Se estamos na página de projetos, carrega TODOS os projetos
-        projetos.forEach(projeto => {
-            containerProjetos.innerHTML += criarCardProjeto(projeto);
-        });
-    } else {
-        // Se estamos na home, carrega apenas os 3 primeiros (principais)
-        const projetosPrincipais = projetos.slice(0, 3);
-        projetosPrincipais.forEach(projeto => {
-            containerProjetos.innerHTML += criarCardProjeto(projeto);
-        });
-    }
-}
-
 // Este evento garante que o script só roda depois que todo o HTML foi carregado
 document.addEventListener('DOMContentLoaded', function() {
     
-    console.log("-> Script.js iniciado e DOM carregado!");
-
-    carregarProjetos();
-
-    // --- LÓGICA DO MENU MOBILE ---
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    console.log("Procurando pelo botão do menu:", menuToggle);
-    console.log("Procurando pelo container do menu:", navMenu);
-
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function() {
-            console.log("Botão do menu clicado!");
-            navMenu.classList.toggle('active');
-        });
+// --- LÓGICA DE CARREGAMENTO DOS PROJETOS ---
+    const containerProjetos = document.querySelector('.projetos-container');
+    if (containerProjetos) {
+        const ehPaginaDeProjetos = document.querySelector('#todos-projetos');
+        const projetosParaRenderizar = ehPaginaDeProjetos ? projetos : projetos.slice(0, 3);
+        
+        containerProjetos.innerHTML = projetosParaRenderizar.map(criarCardProjeto).join('');
     }
+
+    // --- LÓGICA DO MODAL ---
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalContent = document.getElementById('modal-content');
+    const closeModalBtn = document.getElementById('modal-close-btn');
+
+    // Usamos 'Event Delegation' para ouvir cliques em botões que ainda não existem
+    document.body.addEventListener('click', function(e) {
+        const demoButton = e.target.closest('.btn-demo');
+        
+        if (demoButton) {
+            e.preventDefault();
+            const tipoDemo = demoButton.dataset.tipoDemo;
+            const demoSrc = demoButton.dataset.demoSrc;
+
+            if (tipoDemo === 'gif') {
+                modalContent.innerHTML = `<img src="${demoSrc}" alt="Demonstração do projeto">`;
+                modalOverlay.classList.add('active');
+            } else {
+                window.open(demoSrc, '_blank');
+            }
+        }
+    });
+    
+    // Função para fechar o modal
+    function closeModal() {
+        modalOverlay.classList.remove('active');
+        modalContent.innerHTML = ''; // Limpa o conteúdo para não carregar na próxima vez
+    }
+
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+        if (e.target === modalOverlay) { // Fecha somente se clicar no fundo
+            closeModal();
+        }
+    });
+
 
     // --- LÓGICA DA ROLAGEM SUAVE ---
     const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');

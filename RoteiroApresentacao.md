@@ -491,7 +491,6 @@ document.addEventListener('DOMContentLoaded', function() {
 * **Explicação:** O JavaScript faz o menu funcionar, mas o CSS precisa saber o que fazer. Usaremos uma Media Query para aplicar estilos específicos para telas menores que 768px.
 * **Código:** Adicionar o bloco de "RESPONSIVIDADE (MOBILE)" ao final do `style.css`. Explicar como `flex-direction: column` muda o layout de linha para coluna.
 
-
 ### **Etapa Final: Revisão e Publicação (10 minutos)**
 
 * **Revisão Geral:** Navegar pelo site, testar o menu mobile (usando as ferramentas de desenvolvedor do navegador).
@@ -506,6 +505,5 @@ document.addEventListener('DOMContentLoaded', function() {
 * **Dúvidas e Próximos Passos:** Abrir para perguntas e sugerir estudos (CSS Grid, animações, aprofundar em JS).
 
 ## Referências Bibliográficas
-
 
 ---
