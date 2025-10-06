@@ -231,6 +231,7 @@ section h2 {
     color: var(--primary-color);
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 1rem;
     justify-content: center;
