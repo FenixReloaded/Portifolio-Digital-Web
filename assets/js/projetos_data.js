@@ -21,7 +21,7 @@ export const projetos = [
         titulo: 'Gerenciador de Tarefas',
         descricao: 'Um simples gerenciador de tarefas (to-do list) com funcionalidades de adicionar, remover e marcar tarefas como concluídas. Desenvolvido em Python.',
         tipoDemo: 'gif',
-        demoSrc: 'assets/images/gerenciadorTarefasDemonstracao.gif',
+        demoSrc: 'assets/images/gerenciadorTarefasdemonstracao.gif',
         linkCodigo: 'https://github.com/FenixReloaded/Gerenciador_de_Tarefas'
     },
 ];
