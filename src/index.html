@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<!-- Cabeçalho da página -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +14,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
+    <!-- Navegação principal -->
     <nav class="main-nav">
         <div class="container">
             <a class="nav-brand" href="#">Portfólio</a>
@@ -34,6 +36,7 @@
         </div>
     </nav>
 
+    <!-- Seção de destaque -->
     <header id="inicio" class="hero-section">
         <div class="container hero-content">
             <h1>Caio Pereira Guimarães</h1> <!--Substitua pelo nome do aluno-->
@@ -43,10 +46,11 @@
     </header>
 
     <main>
+        <!-- Seção Sobre -->
         <section id="sobre">
             <div class="container sobre-container">
                 <div class="sobre-imagem">
-                    <img src="assets/myimage.png" class="profile-image" alt="Foto de Caio Pereira Guimarães">
+                    <img src="./assets/images/myimage.png" class="profile-image" alt="Foto de Caio Pereira Guimarães">
                 </div>
                 <div class="sobre-texto">
                     <h2>Sobre Mim</h2>
@@ -76,6 +80,7 @@
             </div>
         </section>
 
+        <!-- Seção Projetos -->
         <section id="projetos" class="section-light">
             <div class="container">
                 <h2>Principais Projetos</h2>
@@ -88,6 +93,7 @@
             </div>
         </section>
 
+        <!-- Seção Contato -->
         <section id="contato">
             <div class="container">
                 <h2>Entre em Contato</h2>
@@ -101,10 +107,12 @@
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer class="main-footer">
         <p>&copy; 2025 Caio Pereira Guimarães. Todos os direitos reservados.</p> <!--Substitua pelo nome do aluno-->
     </footer>
 
+    <!-- Janela popup modal para ver demonstrações dos projetos -->
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal" id="modal">
             <button class="modal-close-btn" id="modal-close-btn" aria-label="Fechar modal">&times;</button>
@@ -114,6 +122,7 @@
         </div>
     </div>
 
-    <script type="module" src="script.js" defer></script>
+    <!-- Script principal -->
+    <script type="module" src="assets/js/script.js" defer></script>
 </body>
 </html>
