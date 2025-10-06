@@ -45,6 +45,17 @@ document.addEventListener('DOMContentLoaded', function() {
         containerProjetos.innerHTML = projetosParaRenderizar.map(criarCardProjeto).join('');
     }
 
+    // Lógica do menu mobile
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            // Adiciona ou remove a classe 'active' no menu de navegação para mostrar ou esconder o menu mobile
+            navMenu.classList.toggle('active');
+        });
+    }
+
     // Lógica Modal. Seleciona os elementos do modal
     const modalOverlay = document.getElementById('modal-overlay');
     const modalContent = document.getElementById('modal-content');
