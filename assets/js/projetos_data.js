@@ -9,7 +9,7 @@ export const projetos = [
         linkCodigo: 'https://github.com/FenixReloaded/PlanejadorDeEventos'
     },
     {
-        imagem: 'assets/images/SistemaPetShop.jpg',
+        imagem: 'assets/images/sistemaPetShop.jpg',
         titulo: 'Sistema de uma loja PetShop',
         descricao: 'Sistema de uma loja PetShop desenvolvido em Python, Html, CSS e com um banco de dados MySQL. Possui funcionalidades de cadastro de produtos, clientes, pets, vendas e funcionários.',
         tipoDemo: 'link',
