@@ -217,6 +217,7 @@ section h2 {
 
 .sobre-texto {
     flex: 2 1 400px;
+    width: 100%;
     text-align: justify;
 }
 
