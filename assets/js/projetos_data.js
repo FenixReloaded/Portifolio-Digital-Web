@@ -9,12 +9,12 @@ export const projetos = [
         linkCodigo: 'https://github.com/FenixReloaded/PlanejadorDeEventos'
     },
     {
-        imagem: 'assets/images/sistemaPetShop.jpg',
-        titulo: 'Sistema de uma loja PetShop',
-        descricao: 'Sistema de uma loja PetShop desenvolvido em Python, Html, CSS e com um banco de dados MySQL. Possui funcionalidades de cadastro de produtos, clientes, pets, vendas e funcionários.',
+        imagem: 'assets/images/cafeteriaSaborEAroma.jpg',
+        titulo: 'Site Estático Cafeteria Sabor & Aroma',
+        descricao: 'Sistema de um site estático de uma cafeteria fictícia com integração nuvem da AWS, desenvolvido com HTML, CSS e JavaScript. Inclui páginas como Home, Cardápio e Contato.',
         tipoDemo: 'link',
-        demoSrc: '#', //Criar no github pages e colocar o link aqui, podendo ser como prática para aprendermos a fazer o processo do github pages.
-        linkCodigo: 'https://github.com/FenixReloaded/Petshop'
+        demoSrc: 'https://fenixreloaded.github.io/Site-Estatico-PUC-Coffee/', 
+        linkCodigo: 'https://github.com/FenixReloaded/Site-Estatico-PUC-Coffee'
     },
     {
         imagem: 'assets/images/amostraGerenciadorTarefas.jpg',
