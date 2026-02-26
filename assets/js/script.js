@@ -27,7 +27,17 @@ function criarCardProjeto(projeto) {
 
 //Ponto de entrada do script. Este evento garante que o script só roda depois que todo o HTML foi carregado
 document.addEventListener('DOMContentLoaded', function() {
-    
+
+    // Navbar: adiciona classe 'scrolled' ao rolar para aplicar backdrop-filter e background
+    const mainNav = document.querySelector('.main-nav');
+    if (mainNav) {
+        const onScroll = () => {
+            mainNav.classList.toggle('scrolled', window.scrollY > 60);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll(); // Executa na carga caso a página já esteja rolada
+    }
+
 //Lógica de carregamento dos projetos
     const containerProjetos = document.querySelector('.projetos-container');
     

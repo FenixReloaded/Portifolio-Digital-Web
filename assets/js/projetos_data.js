@@ -24,4 +24,5 @@ export const projetos = [
         demoSrc: 'assets/images/gerenciadorTarefasdemonstracao.gif',
         linkCodigo: 'https://github.com/FenixReloaded/Gerenciador_de_Tarefas'
     },
+    
 ];
